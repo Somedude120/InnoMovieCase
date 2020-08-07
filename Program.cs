@@ -6,7 +6,8 @@ namespace InnoMovieCase
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to the Movie website.");
+            System.Console.WriteLine("Create a new user to start");
         }
     }
 }
