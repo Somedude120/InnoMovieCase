@@ -1,0 +1,13 @@
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/bin/Debug/netcoreapp3.1/InnoMovieCase
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/bin/Debug/netcoreapp3.1/InnoMovieCase.deps.json
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/bin/Debug/netcoreapp3.1/InnoMovieCase.runtimeconfig.json
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/bin/Debug/netcoreapp3.1/InnoMovieCase.runtimeconfig.dev.json
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/bin/Debug/netcoreapp3.1/InnoMovieCase.dll
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/bin/Debug/netcoreapp3.1/InnoMovieCase.pdb
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.csprojAssemblyReference.cache
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.AssemblyInfoInputs.cache
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.AssemblyInfo.cs
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.csproj.CoreCompileInputs.cache
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.dll
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.pdb
+/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.genruntimeconfig.cache
