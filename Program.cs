@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Linq;
+using System;
 using System.Collections.Generic;
 using Handlers;
 using Models;
@@ -19,11 +20,11 @@ namespace InnoMovieCase
             List<ProductModel> boughtList = new List<ProductModel>();
             List<ProductModel> fullBoughtList = new List<ProductModel>();
             List<MostBoughtModel> mostBoughtList = new List<MostBoughtModel>();
-            
+
             //Set lists
             db.userList = userList;
             db.productList = productList;
-            
+
             //Get data, products first, user needs productList
             db.getMovieDataFromDatabase();
             db.getUserDataFromDatabase();
@@ -39,12 +40,19 @@ namespace InnoMovieCase
 
             //Output
             System.Console.WriteLine($"The three most bought films are:");
-            foreach(var mostBoughtProduct in mostBoughtList){
+            foreach (var mostBoughtProduct in mostBoughtList)
+            {
                 System.Console.WriteLine($"{mostBoughtProduct.product.name}");
             }
-            System.Console.WriteLine("Create a new user to start");
-            System.Console.WriteLine($"I am very invasive, so I can see you're looking at:");
+            System.Console.WriteLine($"The top rated films are:");
+            List<ProductModel> sortedRatingList = mBCalc.FindingTopRatedMovies();
+            for (int i = 0; i < 3; i++)
+            {
+                System.Console.WriteLine($"{sortedRatingList[i].name} \t rating: {sortedRatingList[i].rating}");                
+            }
 
+            System.Console.WriteLine($"Welcome user");
+            System.Console.WriteLine($"I suggest you buy:");
         }
     }
 }
