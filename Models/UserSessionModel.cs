@@ -1,4 +1,8 @@
-public class UserSessionModel{
-    int userId;
-    int productId;
+namespace Models
+{
+    public class UserSessionModel
+    {
+        public int userId;
+        public int productId;
+    }
 }

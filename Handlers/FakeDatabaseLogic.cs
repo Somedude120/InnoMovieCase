@@ -15,7 +15,6 @@ namespace Handlers
         public List<UserModel> getUserDataFromDatabase()
         {
             string[] userLines = System.IO.File.ReadAllLines("Movie product data/Users.txt");
-            //id, name, viewed (products seperated by ;), purchased (products seperated by ;)
             foreach (var perUser in userLines)
             {
                 string[] perUserSplit = perUser.Split(',');

@@ -4,7 +4,7 @@ using Models;
 
 namespace Handlers
 {
-    public class MostBoughtCalculator
+    public class MostBoughtAndRatedHandler
     {
         private MostBoughtModel mostBoughtProduct { get; set; }
         public ProductModel boughtProduct { get; set; }
@@ -13,11 +13,11 @@ namespace Handlers
         public List<ProductModel> boughtList { get; set; }
         public List<ProductModel> fullBoughtList { get; set; }
         public List<MostBoughtModel> mostBoughtList { get; set; }
-        public List<ProductModel> FindingTopRatedMovies(){
+        public List<ProductModel> findingTopRatedMovies(){
             List<ProductModel> sortedRatingList = productList.OrderByDescending(o => o.rating).ToList();
             return sortedRatingList;
         }
-        public List<MostBoughtModel> AddingMostBoughtProducts()
+        public List<MostBoughtModel> addingMostBoughtProducts()
         {
             //Look at all the bought products from userlist
             for (int count = 0; count < userList.Count; count++)
@@ -32,7 +32,7 @@ namespace Handlers
                     fullBoughtList.AddRange(boughtList);
                 }
             }
-            // Compare the elements inside the fullBoughtList and find the most bought
+            // Compare the elements inside the fullBoughtList and find duplicates
             var query = fullBoughtList.GroupBy(x => x)
               .Where(g => g.Count() > 1)
               .Select(y => new { Element = y.Key, Counter = y.Count() })
@@ -52,5 +52,3 @@ namespace Handlers
         }
     }
 }
-
-//Træk alle værdier ud fra boughtlist for alle bruger i en anden productlist, derefter sammenlign dem alle med hinanden
