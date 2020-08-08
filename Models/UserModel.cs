@@ -3,9 +3,9 @@ using System.Collections.Generic;
 namespace Models
 {
 public class UserModel{
-        int id;
-        string name;
-        List<ProductModel> productListViewed;
-        List<ProductModel> productListBought;
+        public int id;
+        public string name;
+        public List<ProductModel> productListViewed = new List<ProductModel>();
+        public List<ProductModel> productListBought = new List<ProductModel>();
     }
 }
