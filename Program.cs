@@ -16,15 +16,20 @@ namespace InnoMovieCase
             //Init
             FakeDatabaseLogic db = new FakeDatabaseLogic();
             MostBoughtAndRatedHandler mBCalc = new MostBoughtAndRatedHandler();
+            SessionHandler sessionHandler = new SessionHandler();
+            
             List<UserModel> userList = new List<UserModel>();
             List<ProductModel> productList = new List<ProductModel>();
             List<ProductModel> boughtList = new List<ProductModel>();
             List<ProductModel> fullBoughtList = new List<ProductModel>();
             List<MostBoughtModel> mostBoughtList = new List<MostBoughtModel>();
             List<UserSessionModel> userSessionList = new List<UserSessionModel>();
+            List<ProductModel> suggestedList = new List<ProductModel>();
+            List<OnlineUserModel> onlineUserList = new List<OnlineUserModel>();
 
 
-            //Set lists
+
+            //Set db lists
             db.userList = userList;
             db.productList = productList;
 
@@ -38,8 +43,18 @@ namespace InnoMovieCase
             mBCalc.userList = userList;
             mBCalc.productList = productList;
             mBCalc.mostBoughtList = mostBoughtList;
-
             mBCalc.addingMostBoughtProducts();
+
+            //Sessions list
+            sessionHandler.userSessionList = userSessionList;
+            sessionHandler.suggestedList = suggestedList;
+            sessionHandler.userList = userList;
+            sessionHandler.productList = productList;
+            sessionHandler.onlineUserList = onlineUserList;
+
+            //Session handling
+            userSessionList = sessionHandler.sessionHandler(); //Creates the sessions
+            onlineUserList = sessionHandler.lookUpUserOnline();
 
             //Output
             System.Console.WriteLine($"The three most bought films are:");
@@ -54,8 +69,16 @@ namespace InnoMovieCase
                 System.Console.WriteLine($"{sortedRatingList[i].name} \t rating: {sortedRatingList[i].rating}");                
             }
 
-            System.Console.WriteLine($"User");
+            System.Console.WriteLine($"Users Online:");
+            foreach (var item in onlineUserList)
+            {
+                System.Console.WriteLine($"Name: {item.name} \tID: {item.id} \tFilm: {item.viewingProduct.name}");
+            }
+            System.Console.WriteLine($"They are watching:");
+
+
             System.Console.WriteLine($"Suggestions:");
+
         }
     }
 }

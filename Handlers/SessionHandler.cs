@@ -7,15 +7,19 @@ using System.Collections.Generic;
 
 namespace Handlers
 {
-    public class CurrentSessionHandler
+    public class SessionHandler
     {
+        private OnlineUserModel onlineUser { get; set; }
+        public List<OnlineUserModel> onlineUserList { get; set; }
         public UserSessionModel userSession { get; set; }
         public List<ProductModel> productList { get; set; }
         public ProductModel viewedProduct { get; set; }
-        public List<UserSessionModel> userSessionList {get;set;}
+        public List<UserSessionModel> userSessionList { get; set; }
         public List<ProductModel> suggestedList { get; set; }
+        public List<UserModel> userList { get; set; }
         public List<UserSessionModel> sessionHandler()
         {
+            //This function creates a list of session into id and productId
             //Simply get from textfile
             string[] sessionLines = System.IO.File.ReadAllLines("Movie product data/CurrentUserSession.txt");
             foreach (var session in sessionLines)
@@ -32,22 +36,37 @@ namespace Handlers
             }
             return userSessionList;
         }
-        public ProductModel lookupViewedMovie()
+        public List<OnlineUserModel> lookUpUserOnline()
         {
-            //Look through productlist
-            for (int i = 0; i < productList.Count; i++)
+            //Create own query and join the lists together with ID as the common property
+            var query = from session in userSessionList
+                        join user in userList on session.userId equals user.id into uid
+                        join product in productList on session.productId equals product.id into pid
+                        select new { userId = session.userId, name = uid, product = pid };
+
+            foreach (var item in query)
             {
-                //Check if id to that list exists
-                if (userSession.productId == productList[i].id)
+                foreach (var uid in item.name)
                 {
-                    return productList[i];
+                    foreach (var pid in item.product)
+                    {
+                        onlineUser = new OnlineUserModel(){
+                            id = item.userId,
+                            name = uid.name,
+                            viewingProduct = pid
+                        };
+                        onlineUserList.Add(onlineUser);
+                        // System.Console.WriteLine($"Users online: {uid.name} \t ID: {item.userId} \t Product: {pid.id}");
+                    }
                 }
             }
-            return null;
+            return onlineUserList;
+
         }
+
         public List<ProductModel> recommendAMovieByGenre()
         {
-            //Look at genre he's viewing, 
+            //Look at genre user is viewing, 
             //Make sure the recommended is not the same as the one he's viewing
             suggestedList = productList.FindAll(x => x.keywordOne ==
             viewedProduct.keywordOne && x.id != viewedProduct.id ||
