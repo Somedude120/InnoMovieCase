@@ -78,7 +78,7 @@ namespace Handlers
                     keywordThree = perProductSplit[5],
                     keywordFour = perProductSplit[6],
                     keywordFive = perProductSplit[7],
-                    rating = double.Parse(perProductSplit[8]),
+                    rating = (perProductSplit[8]),
                     price = double.Parse(perProductSplit[9])
                 };
                 //Add product to productList List

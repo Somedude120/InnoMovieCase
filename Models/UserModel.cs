@@ -8,6 +8,5 @@ namespace Models
         public string name;
         public List<ProductModel> productListViewed = new List<ProductModel>();
         public List<ProductModel> productListBought = new List<ProductModel>();
-        public ProductModel viewingProduct;
     }
 }

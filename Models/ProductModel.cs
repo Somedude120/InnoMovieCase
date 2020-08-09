@@ -10,7 +10,7 @@ namespace Models
         public string keywordThree;
         public string keywordFour;
         public string keywordFive;
-        public double rating;
+        public string rating;
         public double price;
     }
 }

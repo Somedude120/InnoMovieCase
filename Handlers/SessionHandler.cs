@@ -1,6 +1,7 @@
 using Models;
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 //Assuming that this is on some session on a website and not a static file
 //Then this is not how you do it. This is all static. The program will be mostly static
@@ -80,11 +81,13 @@ namespace Handlers
 
             List<ProductModel> betterSuggestList = new List<ProductModel>();
             //Max 3 suggestions
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 4; i++)
             {
                 betterSuggestList.Add(suggestedList[i]);
             }
-            onlineUser.suggestedList = betterSuggestList;
+            Random random = new Random();
+            int randomNumber = random.Next(0, 3);
+            onlineUser.suggestedProduct = betterSuggestList[randomNumber];
 
             // foreach (var item in suggestedList)
             // {

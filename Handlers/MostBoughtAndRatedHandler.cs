@@ -13,7 +13,9 @@ namespace Handlers
         public List<ProductModel> boughtList { get; set; }
         public List<ProductModel> fullBoughtList { get; set; }
         public List<MostBoughtModel> mostBoughtList { get; set; }
-        public List<ProductModel> findingTopRatedMovies(){
+
+        public List<ProductModel> findingTopRatedMovies()
+        {
             List<ProductModel> sortedRatingList = productList.OrderByDescending(o => o.rating).ToList();
             return sortedRatingList;
         }
