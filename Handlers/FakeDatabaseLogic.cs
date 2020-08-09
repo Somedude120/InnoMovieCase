@@ -55,10 +55,6 @@ namespace Handlers
                 userList.Add(user);
 
             }
-            // System.Console.WriteLine($"User id: {userList[0].id}");
-            // foreach (var viewed in userList[0].productListViewed){
-            //     System.Console.WriteLine($"User viewed: {viewed.id}");
-            // }
             return userList;
         }
         public List<ProductModel> getMovieDataFromDatabase()

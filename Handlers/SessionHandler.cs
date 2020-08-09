@@ -50,7 +50,9 @@ namespace Handlers
                 {
                     foreach (var pid in item.product)
                     {
-                        onlineUser = new OnlineUserModel(){
+
+                        onlineUser = new OnlineUserModel()
+                        {
                             id = item.userId,
                             name = uid.name,
                             viewingProduct = pid
@@ -61,10 +63,9 @@ namespace Handlers
                 }
             }
             return onlineUserList;
-
         }
 
-        public List<ProductModel> recommendAMovieByGenre()
+        public List<ProductModel> recommendAMovieByGenre(ProductModel viewedProduct)
         {
             //Look at genre user is viewing, 
             //Make sure the recommended is not the same as the one he's viewing
@@ -75,7 +76,19 @@ namespace Handlers
             x.keywordFour == viewedProduct.keywordFour && x.id != viewedProduct.id ||
             x.keywordFive == viewedProduct.keywordFive && x.id != viewedProduct.id);
 
-            return suggestedList;
+            List<ProductModel> betterSuggestList = new List<ProductModel>();
+            //Max 3 suggestions
+            for (int i = 0; i < 1; i++)
+            {
+                betterSuggestList.Add(suggestedList[i]);
+            }
+
+            // foreach (var item in suggestedList)
+            // {
+            //     System.Console.WriteLine($"Suggested: {item.id}");
+            // }
+
+            return betterSuggestList;
         }
     }
 }

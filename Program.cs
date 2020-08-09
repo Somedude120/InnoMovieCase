@@ -17,7 +17,7 @@ namespace InnoMovieCase
             FakeDatabaseLogic db = new FakeDatabaseLogic();
             MostBoughtAndRatedHandler mBCalc = new MostBoughtAndRatedHandler();
             SessionHandler sessionHandler = new SessionHandler();
-            
+
             List<UserModel> userList = new List<UserModel>();
             List<ProductModel> productList = new List<ProductModel>();
             List<ProductModel> boughtList = new List<ProductModel>();
@@ -55,6 +55,8 @@ namespace InnoMovieCase
             //Session handling
             userSessionList = sessionHandler.sessionHandler(); //Creates the sessions
             onlineUserList = sessionHandler.lookUpUserOnline();
+            sessionHandler.viewedProduct = onlineUserList[0].viewingProduct;
+            // suggestedList = sessionHandler.recommendAMovieByGenre();
 
             //Output
             System.Console.WriteLine($"The three most bought films are:");
@@ -66,18 +68,24 @@ namespace InnoMovieCase
             List<ProductModel> sortedRatingList = mBCalc.findingTopRatedMovies();
             for (int i = 0; i < 3; i++)
             {
-                System.Console.WriteLine($"{sortedRatingList[i].name} \t rating: {sortedRatingList[i].rating}");                
+                System.Console.WriteLine($"{sortedRatingList[i].name} \t rating: {sortedRatingList[i].rating}");
             }
 
-            System.Console.WriteLine($"Users Online:");
+            System.Console.WriteLine($"Users Online and browsing:");
             foreach (var item in onlineUserList)
             {
-                System.Console.WriteLine($"Name: {item.name} \tID: {item.id} \tFilm: {item.viewingProduct.name}");
+                System.Console.WriteLine($"Name: {item.name} \tID: {item.id} \tBrowsing: {item.viewingProduct.name} \t");
             }
-            System.Console.WriteLine($"They are watching:");
-
-
             System.Console.WriteLine($"Suggestions:");
+            foreach (var item in onlineUserList)
+            {
+                suggestedList = sessionHandler.recommendAMovieByGenre(item.viewingProduct);
+
+                foreach (var suggested in suggestedList)
+                {
+                    System.Console.WriteLine($"Name: {item.name} \tSuggested: {suggested.name}");
+                }
+            }
 
         }
     }
