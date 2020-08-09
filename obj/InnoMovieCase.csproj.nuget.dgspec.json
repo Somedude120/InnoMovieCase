@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/InnoMovieCase.csproj": {}
+    "D:\\Skole\\InnoMovie\\InnoMovieCase\\InnoMovieCase.csproj": {}
   },
   "projects": {
-    "/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/InnoMovieCase.csproj": {
+    "D:\\Skole\\InnoMovie\\InnoMovieCase\\InnoMovieCase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/InnoMovieCase.csproj",
+        "projectUniqueName": "D:\\Skole\\InnoMovie\\InnoMovieCase\\InnoMovieCase.csproj",
         "projectName": "InnoMovieCase",
-        "projectPath": "/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/InnoMovieCase.csproj",
-        "packagesPath": "/home/daniel/.nuget/packages/",
-        "outputPath": "/home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/",
+        "projectPath": "D:\\Skole\\InnoMovie\\InnoMovieCase\\InnoMovieCase.csproj",
+        "packagesPath": "C:\\Users\\dph11\\.nuget\\packages\\",
+        "outputPath": "D:\\Skole\\InnoMovie\\InnoMovieCase\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/daniel/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\dph11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

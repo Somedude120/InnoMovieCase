@@ -11,3 +11,15 @@
 /home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.dll
 /home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.pdb
 /home/daniel/Dokumenter/Ansøgninger/InnoFlow/InnoMovieCase/obj/Debug/netcoreapp3.1/InnoMovieCase.genruntimeconfig.cache
+D:\Skole\InnoMovie\InnoMovieCase\bin\Debug\netcoreapp3.1\InnoMovieCase.exe
+D:\Skole\InnoMovie\InnoMovieCase\bin\Debug\netcoreapp3.1\InnoMovieCase.deps.json
+D:\Skole\InnoMovie\InnoMovieCase\bin\Debug\netcoreapp3.1\InnoMovieCase.runtimeconfig.json
+D:\Skole\InnoMovie\InnoMovieCase\bin\Debug\netcoreapp3.1\InnoMovieCase.runtimeconfig.dev.json
+D:\Skole\InnoMovie\InnoMovieCase\bin\Debug\netcoreapp3.1\InnoMovieCase.dll
+D:\Skole\InnoMovie\InnoMovieCase\bin\Debug\netcoreapp3.1\InnoMovieCase.pdb
+D:\Skole\InnoMovie\InnoMovieCase\obj\Debug\netcoreapp3.1\InnoMovieCase.AssemblyInfoInputs.cache
+D:\Skole\InnoMovie\InnoMovieCase\obj\Debug\netcoreapp3.1\InnoMovieCase.AssemblyInfo.cs
+D:\Skole\InnoMovie\InnoMovieCase\obj\Debug\netcoreapp3.1\InnoMovieCase.csproj.CoreCompileInputs.cache
+D:\Skole\InnoMovie\InnoMovieCase\obj\Debug\netcoreapp3.1\InnoMovieCase.dll
+D:\Skole\InnoMovie\InnoMovieCase\obj\Debug\netcoreapp3.1\InnoMovieCase.pdb
+D:\Skole\InnoMovie\InnoMovieCase\obj\Debug\netcoreapp3.1\InnoMovieCase.genruntimeconfig.cache

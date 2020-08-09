@@ -55,7 +55,7 @@ namespace InnoMovieCase
             //Session handling
             userSessionList = sessionHandler.sessionHandler(); //Creates the sessions
             onlineUserList = sessionHandler.lookUpUserOnline();
-            sessionHandler.viewedProduct = onlineUserList[0].viewingProduct;
+            //sessionHandler = onlineUserList[0].viewingProduct;
             // suggestedList = sessionHandler.recommendAMovieByGenre();
 
             //Output
@@ -79,9 +79,9 @@ namespace InnoMovieCase
             System.Console.WriteLine($"Suggestions:");
             foreach (var item in onlineUserList)
             {
-                suggestedList = sessionHandler.recommendAMovieByGenre(item.viewingProduct);
+                suggestedList = sessionHandler.recommendAMovieByGenre(item);
 
-                foreach (var suggested in suggestedList)
+                foreach (var suggested in item.suggestedList)
                 {
                     System.Console.WriteLine($"Name: {item.name} \tSuggested: {suggested.name}");
                 }

@@ -13,7 +13,7 @@ namespace Handlers
         public List<OnlineUserModel> onlineUserList { get; set; }
         public UserSessionModel userSession { get; set; }
         public List<ProductModel> productList { get; set; }
-        public ProductModel viewedProduct { get; set; }
+        //public ProductModel viewedProduct { get; set; }
         public List<UserSessionModel> userSessionList { get; set; }
         public List<ProductModel> suggestedList { get; set; }
         public List<UserModel> userList { get; set; }
@@ -65,8 +65,10 @@ namespace Handlers
             return onlineUserList;
         }
 
-        public List<ProductModel> recommendAMovieByGenre(ProductModel viewedProduct)
+        //Highly coupled with onlineUser now
+        public List<ProductModel> recommendAMovieByGenre(OnlineUserModel onlineUser)
         {
+            ProductModel viewedProduct = onlineUser.viewingProduct;
             //Look at genre user is viewing, 
             //Make sure the recommended is not the same as the one he's viewing
             suggestedList = productList.FindAll(x => x.keywordOne ==
@@ -82,6 +84,7 @@ namespace Handlers
             {
                 betterSuggestList.Add(suggestedList[i]);
             }
+            onlineUser.suggestedList = betterSuggestList;
 
             // foreach (var item in suggestedList)
             // {
