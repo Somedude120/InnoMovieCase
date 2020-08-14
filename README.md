@@ -16,4 +16,6 @@ The main program is located at publish
 The file is named InnoMovieCase.exe and as always is not signed
 For the exe to run IT IS REQUIRED TO BE ALLOWED TO RUN ON YOUR SYSTEM as it is NOT signed or verified by Cert or CA (Certified Authority).
 
-This project is strictly for educational purpose which when assignment is done will be open to public display at Github on the profile Somedude120
+This project is strictly for educational purpose.
+
+Evaluated Score: 9.1
